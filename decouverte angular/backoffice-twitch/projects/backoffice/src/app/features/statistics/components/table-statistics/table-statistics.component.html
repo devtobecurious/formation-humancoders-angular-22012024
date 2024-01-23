@@ -1,0 +1,24 @@
+@if(list) {
+  <h3>{{ titleTable }}</h3>
+  <table>
+  @for (item of list; track item) {
+    <tr>
+      <td>
+        {{ item.annee }}
+      </td>
+      <td>
+        {{ item.mois }}
+      </td>
+      <td>
+        {{ item.partiesGagnees }}
+      </td>
+      <td>
+        {{ item.partiesPerdues }}
+      </td>
+    </tr>
+  }
+  </table>
+}
+
+<button (click)="clickToAdd()">Ajouter</button>
+
