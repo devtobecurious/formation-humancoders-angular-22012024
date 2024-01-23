@@ -1,5 +1,7 @@
 <h2>Liste des parties</h2>
 
+<twitch-search-games></twitch-search-games>
+
 @for (game of gameList; track game.id) {
   <app-row-game [item]="game" (toEdit)="editOne($event)" (toDelete)="deleteOne($event)"></app-row-game>
 }
