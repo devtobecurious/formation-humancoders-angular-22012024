@@ -1,0 +1,13 @@
+@if(item) {
+  {{ item | json }}
+
+  <div>
+    <input type="hidden" value="{{item.id}}">
+
+    <label>Date</label>
+    <input type="date" value="{{item.date | date}}">
+  </div>
+  <div>
+    <button (click)="clickToCancel()">Annuler</button>
+  </div>
+}

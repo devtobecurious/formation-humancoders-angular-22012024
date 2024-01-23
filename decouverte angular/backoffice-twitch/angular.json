@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "projects/backoffice",
       "sourceRoot": "projects/backoffice/src",
-      "prefix": "app",
+      "prefix": "twitch",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",

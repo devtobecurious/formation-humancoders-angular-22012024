@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ListGamesComponent } from './features/games/list-games/list-games.component';
+import { ListGamesComponent } from './features/games/components/list-games/list-games.component';
 import { NgIf } from '@angular/common';
 
 @Component({

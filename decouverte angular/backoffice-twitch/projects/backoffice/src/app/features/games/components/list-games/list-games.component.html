@@ -1,0 +1,23 @@
+<h2>Liste des parties</h2>
+
+@for (game of gameList; track game.id) {
+  <app-row-game [item]="game" (toEdit)="editOne($event)" (toDelete)="deleteOne($event)"></app-row-game>
+}
+
+@if(currentGame) {
+  <twitch-edit-game [item]="currentGame" (cancelEdit)="cancel()"></twitch-edit-game>
+}
+<!-- <tr *ngFor="let item of gameList">
+      <td>
+        {{ item.id }}
+      </td>
+      <td>
+        {{ item.date }}
+      </td>
+      <td>
+        {{ item.videoGame }}
+      </td>
+      <td>
+        {{ item.state }}
+      </td>
+    </tr> -->
