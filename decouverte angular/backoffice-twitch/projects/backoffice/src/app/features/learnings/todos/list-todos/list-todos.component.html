@@ -1,0 +1,12 @@
+@for (item of todos$ | async; track item.id) {
+  <div>
+    {{item.title}}
+  </div>
+}
+
+<!-- Deux pipes async : deux appels à l'api -->
+@for (item of todos$ | async; track item.id) {
+  <div>
+    {{item.title}}
+  </div>
+}
