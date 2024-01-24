@@ -1,1 +1,8 @@
-<p>search-games works!</p>
+<select (change)="selectPeople()">
+@for (item of people$ | async; track item.name) {
+  <option value="{{item.name}}">{{ item.name }}</option>
+}
+</select>
+
+
+<button >Filtrer</button>

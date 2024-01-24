@@ -10,3 +10,9 @@ export interface Game {
 export type GameOrUndefined = TypeOrUndefined<Game>;
 
 export type Games = Game[];
+
+export interface Person {
+  name: string
+}
+
+export type People = Person[];
