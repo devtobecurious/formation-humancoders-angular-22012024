@@ -10,7 +10,7 @@ export class GameBusinessService {
   getAll(): Observable<Games> {
     // Dans un service on ne souscrit jamais à une observable !
     // On retourne l'observable
-    const result = [{ id: 1, date: new Date(), state: 'succes', videoGame: 'God of war' }];
+    const result: Games = [{ id: 1, date: new Date(), state: 'success', videoGame: 'God of war' }];
     return of(result);
     //return this.http.get<Games>('https://swapi.dev/api/people');
   }

@@ -1,9 +1,13 @@
 import { TypeOrUndefined } from "../../../core/custom-types";
 
+export type GameState = 'success' | 'echec';
+
 export interface Game {
   id: number;
   date: Date;
-  state: string;
+  //state: string;
+  // state: 'success' | 'echec';
+  state: GameState,
   videoGame: string
 }
 

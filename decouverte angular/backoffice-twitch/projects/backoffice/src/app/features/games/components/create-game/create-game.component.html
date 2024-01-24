@@ -1,0 +1,17 @@
+{{ game | json }}
+
+<form #gameForm="ngForm" (ngSubmit)="createOne()">
+  <div>
+    <label>Date</label>
+    <input name="date" type="date" [(ngModel)]="game.date">
+  </div>
+
+  <div>
+    <label>Jeu vidéo</label>
+    <input name="videoGame" type="text" [(ngModel)]="game.videoGame" required>
+  </div>
+
+  <div>
+    <button [disabled]="! gameForm.form.valid">Enregistrer</button>
+  </div>
+</form>
