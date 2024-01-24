@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, signal } from '@angular/core';
 import { Game, GameOrUndefined, Games } from '../../models';
 import { NgFor } from '@angular/common';
 import { RowGameComponent } from '../row-game/row-game.component';
@@ -23,6 +23,7 @@ export class ListGamesComponent implements OnInit, OnDestroy {
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly gameService = inject(GameBusinessService); // Injection de dépendance
 
+  title = signal<string>('Liste des parties');
   // gameList: Games = [{ id: 1, date: new Date(), state: 'succes', videoGame: 'God of war' }]
   gameList: TypeOrUndefined<Games>;
   currentGame: GameOrUndefined;
@@ -41,6 +42,10 @@ export class ListGamesComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptionContainer.unsubscribe();
+  }
+
+  refresh(): void {
+    this.title.set('Liste d\'une partie');
   }
 
   editOne(game: Game): void {

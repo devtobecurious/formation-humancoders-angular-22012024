@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+
+    "prejohny": "echo 'ah que que'",
+    "johny": "echo 'optic 2000'",
+
+    "prestart": "npm run johny",
+    "start": "ng serve -o --port=4201",
+
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
